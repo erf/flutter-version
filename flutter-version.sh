@@ -5,6 +5,12 @@ if [[ -f ".flutter-version" ]]; then
   # Read the version tag from the file
   FLUTTER_TAG=$(<.flutter-version)
 
+  # Check if the .flutter-version file is empty
+  if [[ -z "$FLUTTER_TAG" ]]; then
+    echo ".flutter-version file is empty. Please specify a Flutter version tag."
+    exit 1
+  fi
+
   # Find the Flutter installation path
   FLUTTER_PATH=$(which flutter)
 
