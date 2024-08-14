@@ -1,4 +1,4 @@
-# Flutter Version Switcher
+# Flutter Version
 
 This Bash script helps you easily switch between different versions of Flutter using Git tags specified in a `.flutter-version` file.
 
