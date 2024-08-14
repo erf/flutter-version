@@ -2,9 +2,7 @@
 
 This Bash script helps you easily switch between different versions of Flutter using Git tags specified in a `.flutter-version` file.
 
-Compared with e.g. `asdf-flutter` you don't download the whole Flutter repo when switching versions.
-
-Note dependencies needs to be reinstalled when changing Flutter version (the next time you run a Flutter command).
+> Compared with e.g. `asdf-flutter` you don't download the whole Flutter repo when switching versions
 
 ## Prerequisites
 
@@ -15,6 +13,5 @@ Note dependencies needs to be reinstalled when changing Flutter version (the nex
 
 ### 1. Create a `.flutter-version` File
 
-In the root directory of your project, create a file named `.flutter-version`. This file should contain the Git tag of the Flutter version you want to use. For example:
+In the root directory of your project, create a file named `.flutter-version`. This file should contain the Git tag of the Flutter version you want to use. E.g: `3.19.0`
 
-3.19.0
