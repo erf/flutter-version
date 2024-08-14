@@ -19,6 +19,14 @@ if [[ -f ".flutter-version" ]]; then
   # Change to the Flutter directory
   cd "$FLUTTER_DIR" || exit
 
+  # Get the current checked-out Git tag
+  CURRENT_TAG=$(git describe --tags)
+
+  if [[ "$CURRENT_TAG" == "$FLUTTER_TAG" ]]; then
+    echo "Already on Flutter version $FLUTTER_TAG. No changes needed."
+    exit 0
+  fi
+
   # Checkout the specified tag
   git checkout "$FLUTTER_TAG"
 
